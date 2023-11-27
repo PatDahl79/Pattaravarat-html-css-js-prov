@@ -9,7 +9,14 @@ const car = {
 };
 
 function addIsFast(car) {
-  // Din kod här
+    // Skapa en kopia av bilobjektet med spread operator
+  const carCopy = { ...car};
+
+  // lägg till egenskapen isFast baserat på hastigheten
+  carCopy.isFast = car.speed > 100;
+
+  // retunera det nya objektet
+  return carCopy;
 }
 console.log(addIsFast(car)); // Ska logga { name: "Volvo", speed: 120, isFast: true }
 
@@ -19,7 +26,11 @@ console.log(addIsFast(car)); // Ska logga { name: "Volvo", speed: 120, isFast: t
 // Returnera den nya arrayen
 
 function combineArrays(arr1, arr2) {
-  // Din kod här
+  // Använd spread operatorn för att kombinera arrayerna
+  const combinedArray = [...arr1, ...arr2];
+
+  // Returnera den nya arrayen
+  return combinedArray;
 }
 
 console.log(combineArrays([1, 2, 3], [4, 5, 6])); // Ska logga [1, 2, 3, 4, 5, 6]

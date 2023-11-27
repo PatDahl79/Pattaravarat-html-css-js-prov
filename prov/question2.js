@@ -4,7 +4,10 @@
 // tips: använd indexOf eller includes
 
 function filterWordsWithLetterA(words) {
-  //Din kod här
+    return words.filter(word => word.toLowerCase().includes('a'));
 }
 
 console.log(filterWordsWithLetterA(["Programming", "is", "great!"])); // ska logga ["Programming", "great!"]
+
+
+

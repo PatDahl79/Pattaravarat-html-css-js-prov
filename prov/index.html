@@ -6,8 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Prov</title>
   </head>
+
   <body>
-    <div id="posts"></div>
+    <div id="posts" class="posts-container"></div>
     <div id="postsWithComments"></div>
     <script src="question1.js"></script>
     <script src="question2.js"></script>
@@ -16,5 +17,61 @@
     <script src="question5.js"></script>
     <script src="question6.js"></script>
     <script src="question7.js"></script>
+
+  <style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+  }
+
+  .posts-container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .post {
+    padding: 20px;
+    margin: 10px;
+    background-color: #f2f2f2;
+    color: gray;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+  }
+
+  .post:hover {
+    background-color: white;
+  }
+
+  .comments-container {
+  margin-top: 10px;
+  }
+
+  .comment {
+  padding: 10px;
+  margin: 5px 0;
+  background-color: #f2f2f2;
+  color: gray;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  }
+
+  .comment:hover {
+  background-color: white;
+  }
+
+  @media (max-width: 768px) {
+    .post {
+      width: 100%;
+    }
+}
+
+  @media (min-width: 769px) {
+    .post {
+      width: calc(25% - 20px);
+    }
+  }
+
+  </style>
+
   </body>
 </html>

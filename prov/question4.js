@@ -19,7 +19,10 @@ const shoppingCart = [
 ];
 
 function calculateTotalPrice2(shoppingCart, prices) {
-  // Din kod här
+  // Använd reduce för att summera priset för varje produkt i shoppingCart
+  const totalPrice = shoppingCart.reduce((acc, product) => acc + prices[product.model], 0);
+  return totalPrice;
 }
+
 
 console.log(calculateTotalPrice2(shoppingCart, modelPrices)); // Ska logga 550

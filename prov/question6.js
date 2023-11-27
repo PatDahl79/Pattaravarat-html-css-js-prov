@@ -23,7 +23,24 @@ function isEven(num) {
 }
 
 function median(arr) {
-  //Din kod här
+  //Sortera arrayen
+  const sortedArray = sortArray(arr);
+
+  //kolla om arayens längs ör udda eller jämna
+  const isEvenLength = isEven(sortedArray.length);
+
+  // Om arrayens längd är udda
+  if (!isEvenLength) {
+    const middleIndex = Math.floor((sortedArray.length - 1) / 2);
+    return sortedArray[middleIndex];
+  } else {
+    // Om arrayens längd är jämna
+    const middleIndex1 = sortedArray.length / 2;
+    const middleIndex2 = middleIndex1 - 1;
+    const middleValue1 = sortedArray[middleIndex1];
+    const middleValue2 = sortedArray[middleIndex2];
+    return (middleValue1 + middleValue2) / 2;
+  }
 }
 
 console.log(median([1, 5, 7, 23, 120])); // ska logga 7

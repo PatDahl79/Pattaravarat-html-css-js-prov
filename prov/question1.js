@@ -7,7 +7,19 @@
 // "Unknown" om inget av ovan stämmer
 
 function howFast(number) {
-  //Din kod här
+  const isFast = number >= 100;
+  const isSlow = number <= 20;
+  const isMedium = number >= 30 && number <= 50;
+
+  if (isFast) {
+      return "Fast";
+  } else if (isSlow) {
+      return "Slow";
+  } else if (isMedium) {
+      return "Medium";
+  } else {
+      return "Unknown";
+  }
 }
 
 console.log(howFast(20)); // Ska logga "Slow"
